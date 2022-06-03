@@ -40,12 +40,12 @@ async def main(bot: Client, msg: Message):
                     await msg.chat.kick_member(user_id)
                     await msg.reply("Banned member because not joined Force Subscribe Chat")
                     return
-                buttons = [[InlineKeyboardButton("💖 Join TamilRoars 💖", url=link)]]
+                buttons = [[InlineKeyboardButton("🔰 Join TamilRoars 🔰", url=link)]]
                 if action == 'mute':
                     await msg.chat.restrict_member(user_id, ChatPermissions(can_send_messages=False))
-                    buttons.append([InlineKeyboardButton("Joined ✳️ ", callback_data=f"joined+{msg.from_user.id}")])
+                    buttons.append([InlineKeyboardButton("Joined ✅ ", callback_data=f"joined+{msg.from_user.id}")])
                 await msg.reply(
-                    f"💖 ᴊᴏɪɴ ᴛᴀᴍɪʟʀᴏᴀʀs ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴄʟɪᴄᴋ ᴊᴏɪɴᴇᴅ 💖",
+                    f"💖 நீங்கள் இன்னும் @Tamil_Roars சேனலில் சேரவில்லை. நீங்கள் இணைந்தால் மட்டுமே இந்த குழுவிற்கு செய்தி அனுப்ப முடியும். இணைந்த பிறகு, joined என்பதைக் கிளிக் செய்யவும். 💖\n\n💖 ʏᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ʏᴇᴛ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴛᴀᴍɪʟʀᴏᴀʀs ᴄʜᴀɴɴᴇʟ. ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ᴍᴇssᴀɢᴇ ᴛʜɪs ɢʀᴏᴜᴘ ɪꜰ ʏᴏᴜ ᴊᴏɪɴ. ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ, ᴄʟɪᴄᴋ ᴏɴ ᴊᴏɪɴᴇᴅ 💖",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
